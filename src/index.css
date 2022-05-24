@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Nunito:wght@500&family=PT+Sans:ital,wght@1,700&family=Teko:wght@500&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html , body { 
+  overflow-x: hidden;
+  background-color: #111;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Barlow;
+  color: white;
+}

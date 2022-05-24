@@ -1,0 +1,153 @@
+.dropdown{
+    width: 100%;
+    max-width: 660px;
+}
+
+.dropdown__title {
+    width: 100%;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    border-bottom: 2px solid black;
+    color: white;
+    cursor: pointer;
+    flex: 1;
+}
+
+.dropdown__title__itself {
+    font-size: 2rem;
+    flex: 1;
+}
+
+@media (max-width: 768px){
+    .dropdown {
+        max-width: 270px;
+    }
+
+    .dropdown__title__itself {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 380px){
+    .dropdown {
+        max-width: 270px;
+    }
+
+    .dropdown__title__itself {
+        font-size: 1.1rem;
+    }
+}
+
+.dropdown__title__expandShape {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background: white;   
+    transform-origin: center
+}
+
+.dropdown__title__expandShape::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 30px;
+    width: 3px;
+    background-color: white;
+
+    transform-origin: center;
+}
+
+@media (max-width: 768px){
+    .dropdown__title__expandShape {
+        width: 20px;
+        height: 2px;
+    }
+
+    .dropdown__title__expandShape::after {
+        width: 2px;
+        height: 20px;
+    }
+    .drowdown__description {
+        font-size: 1rem !important;
+    }
+}
+
+.drowdown__description {
+    width: calc(100% + 50px);
+    background-color: #222;
+    color: white;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    overflow: hidden;
+    max-height: 0px;
+    padding: 0px;
+}
+
+.drowdown__description .decContent {
+    padding: 15px 25px;
+}
+
+.openExpandShape__animation {
+    animation: expaAni .25s ease-in forwards;
+}
+
+.closeExpandShape__animation {
+    animation: closeAni .25s ease-in forwards;
+
+}
+
+@keyframes expaAni {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes closeAni {
+    from {
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+.descOpen__ani {
+    animation: descOpen .25s ease-in-out forwards;
+}
+
+.descClose__ani {
+    animation: descClose .25s ease-in-out forwards;
+}
+
+
+@keyframes descOpen {
+    from {
+        max-height: 0px;
+ 
+    }
+    to {
+        max-height: 1200px;
+   
+    }
+}
+
+
+@keyframes descClose {
+    from {
+        max-height: 1200px;
+  
+    }
+    to {
+        max-height: 0px ;
+    
+    }
+}
+
